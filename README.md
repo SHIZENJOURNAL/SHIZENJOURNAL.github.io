@@ -1,1 +1,1 @@
-# WANDERURJOURNAL.github.io
+# SHIZENJOURNAL.github.io
