@@ -168,3 +168,135 @@ transform:translateY(-2px);
 box-shadow:0 8px 20px rgba(37,99,235,.3);
 
 }
+/* =========================
+   TRAVEL SECTION
+========================= */
+
+.travel-section {
+    padding: 70px 8%;
+    background: #f7f7f7;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.section-heading p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Travel Grid */
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Travel Card */
+
+.travel-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.travel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* Card Image */
+
+.travel-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Content */
+
+.travel-content {
+    padding: 22px;
+}
+
+.travel-category {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+.travel-content h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    line-height: 1.3;
+    color: #222;
+}
+
+.travel-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+/* Read More */
+
+.read-more {
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #111;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    color: #777;
+    border-color: #777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .travel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .travel-section {
+        padding: 50px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .travel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-card img {
+        height: 210px;
+    }
+
+}
