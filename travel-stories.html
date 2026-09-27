@@ -1,36 +1,240 @@
-<!-- =========================
+<!-- =====================================================
+     TRAVEL STORIES SECTION
+     HTML + CSS IN ONE FILE
+===================================================== -->
+
+<style>
+
+    /* =========================
+       TRAVEL STORIES SECTION
+    ========================= */
+
+    .travel-stories-section {
+        width: 100%;
+        padding: 80px 7%;
+        background: #f7f7f7;
+        box-sizing: border-box;
+    }
+
+    /* Section Heading */
+
+    .travel-stories-heading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .travel-stories-heading h2 {
+        font-size: 42px;
+        margin: 0 0 12px;
+        color: #222;
+        font-family: Arial, sans-serif;
+    }
+
+    .travel-stories-heading p {
+        font-size: 17px;
+        color: #666;
+        margin: 0 auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-family: Arial, sans-serif;
+    }
+
+    /* =========================
+       STORIES GRID
+    ========================= */
+
+    .travel-stories-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    /* =========================
+       STORY CARD
+    ========================= */
+
+    .travel-story-card {
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .travel-story-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Story Image */
+
+    .travel-story-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Story Content */
+
+    .travel-story-content {
+        padding: 25px;
+    }
+
+    .travel-story-category {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    .travel-story-content h3 {
+        font-size: 23px;
+        line-height: 1.35;
+        margin: 12px 0;
+        color: #222;
+        font-family: Arial, sans-serif;
+    }
+
+    .travel-story-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Read More Button */
+
+    .travel-read-more {
+        display: inline-block;
+        color: #111;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #111;
+        transition: 0.3s ease;
+        font-family: Arial, sans-serif;
+    }
+
+    .travel-read-more:hover {
+        color: #777;
+        border-color: #777;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 950px) {
+
+        .travel-stories-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .travel-stories-section {
+            padding: 65px 5%;
+        }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        .travel-stories-section {
+            padding: 55px 5%;
+        }
+
+        .travel-stories-heading h2 {
+            font-size: 32px;
+        }
+
+        .travel-stories-heading p {
+            font-size: 15px;
+        }
+
+        .travel-stories-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .travel-story-card img {
+            height: 220px;
+        }
+
+        .travel-story-content {
+            padding: 22px;
+        }
+
+        .travel-story-content h3 {
+            font-size: 21px;
+        }
+
+    }
+
+</style>
+
+
+<!-- =====================================================
      TRAVEL STORIES
-========================= -->
+===================================================== -->
 
-<section class="travel-section" id="travel-stories">
+<section class="travel-stories-section" id="travel-stories">
 
-    <div class="section-heading">
+    <div class="travel-stories-heading">
+
         <h2>Travel Stories</h2>
+
         <p>
-            Stories, memories and adventures from the roads, mountains and trails.
+            Stories, memories and adventures from my journeys
+            through mountains, trails and roads.
         </p>
+
     </div>
 
-    <div class="travel-grid">
 
-        <!-- STORY 1 -->
-        <div class="travel-card">
+    <div class="travel-stories-grid">
 
-            <img src="images/churdhar-1.jpg" alt="Churdhar Trek">
 
-            <div class="travel-content">
+        <!-- =========================
+             STORY 1
+        ========================= -->
 
-                <span class="travel-category">MY TRIP • CHURDHAR</span>
+        <div class="travel-story-card">
 
-                <h3>Churdhar Trek: My Journey to the Highest Peak of Outer Himalayas</h3>
+            <img
+                src="images/churdhar-1.jpg"
+                alt="Churdhar Trek"
+            >
+
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • CHURDHAR
+                </span>
+
+                <h3>
+                    Churdhar Trek: My Journey Through the Mountains
+                </h3>
 
                 <p>
-                    A journey through the mountains, forests and beautiful trails
-                    of Churdhar. From the starting point to Shirgul Mahadev Temple
-                    and finally reaching the summit.
+                    A journey through the forests, mountain trails and
+                    beautiful landscapes of Churdhar. From the beginning
+                    of the trek to reaching the summit.
                 </p>
 
-                <a href="stories/churdhar-story.html" class="read-more">
+                <a
+                    href="churdhar-story.html"
+                    class="travel-read-more"
+                >
                     Read Full Story →
                 </a>
 
@@ -39,24 +243,38 @@
         </div>
 
 
-        <!-- STORY 2 -->
-        <div class="travel-card">
 
-            <img src="images/kheerganga-1.jpg" alt="Kheerganga Trek">
+        <!-- =========================
+             STORY 2
+        ========================= -->
 
-            <div class="travel-content">
+        <div class="travel-story-card">
 
-                <span class="travel-category">MY TRIP • KHEERGANGA</span>
+            <img
+                src="images/kheerganga-1.jpg"
+                alt="Kheerganga Trek"
+            >
 
-                <h3>My Kheerganga Trek: From Kasol to the Mountains</h3>
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • KHEERGANGA
+                </span>
+
+                <h3>
+                    Kheerganga Trek: From Kasol to the Mountains
+                </h3>
 
                 <p>
-                    Follow my journey from Punjab to Kasol, Barshaini and the
-                    beautiful Kheerganga trail, including the route, views,
-                    food and moments from the trip.
+                    My journey through Kasol and Barshaini towards
+                    Kheerganga, with mountain views, trekking moments
+                    and memories from the trip.
                 </p>
 
-                <a href="stories/kheerganga-story.html" class="read-more">
+                <a
+                    href="kheerganga-story.html"
+                    class="travel-read-more"
+                >
                     Read Full Story →
                 </a>
 
@@ -65,24 +283,38 @@
         </div>
 
 
-        <!-- STORY 3 -->
-        <div class="travel-card">
 
-            <img src="images/himachal-trip-1.jpg" alt="Himachal Trip">
+        <!-- =========================
+             STORY 3
+        ========================= -->
 
-            <div class="travel-content">
+        <div class="travel-story-card">
 
-                <span class="travel-category">MY TRIP • HIMACHAL</span>
+            <img
+                src="images/himachal-trip-1.jpg"
+                alt="Himachal Road Trip"
+            >
 
-                <h3>A Road Trip Through the Mountains of Himachal</h3>
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • HIMACHAL
+                </span>
+
+                <h3>
+                    A Road Trip Through the Mountains of Himachal
+                </h3>
 
                 <p>
-                    A collection of moments from my road trip through Himachal,
-                    including mountain roads, villages, views and unexpected
-                    experiences along the way.
+                    Mountain roads, small villages, beautiful views and
+                    unexpected moments from one of my road trips through
+                    Himachal Pradesh.
                 </p>
 
-                <a href="stories/himachal-road-trip.html" class="read-more">
+                <a
+                    href="himachal-road-trip.html"
+                    class="travel-read-more"
+                >
                     Read Full Story →
                 </a>
 
@@ -91,29 +323,125 @@
         </div>
 
 
-        <!-- STORY 4 -->
-        <div class="travel-card">
 
-            <img src="images/mountain-trip-1.jpg" alt="Mountain Trip">
+        <!-- =========================
+             STORY 4
+        ========================= -->
 
-            <div class="travel-content">
+        <div class="travel-story-card">
 
-                <span class="travel-category">MY TRIP • ADVENTURE</span>
+            <img
+                src="images/mountain-trip-1.jpg"
+                alt="Mountain Adventure"
+            >
 
-                <h3>Lost in the Mountains: A Weekend Adventure</h3>
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • ADVENTURE
+                </span>
+
+                <h3>
+                    A Weekend Lost in the Mountains
+                </h3>
 
                 <p>
-                    Sometimes the best trips are the ones without a perfect plan.
-                    Here is the story of a weekend spent exploring the mountains.
+                    Sometimes the best journeys are the ones without a
+                    perfect plan. Here is the story of a weekend adventure
+                    in the mountains.
                 </p>
 
-                <a href="stories/mountain-adventure.html" class="read-more">
+                <a
+                    href="mountain-adventure.html"
+                    class="travel-read-more"
+                >
                     Read Full Story →
                 </a>
 
             </div>
 
         </div>
+
+
+
+        <!-- =========================
+             STORY 5
+        ========================= -->
+
+        <div class="travel-story-card">
+
+            <img
+                src="images/road-trip-1.jpg"
+                alt="Mountain Road Trip"
+            >
+
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • ROAD TRIP
+                </span>
+
+                <h3>
+                    Chasing Roads, Clouds and Mountain Views
+                </h3>
+
+                <p>
+                    A road trip filled with winding roads, changing
+                    weather, mountain landscapes and moments worth
+                    remembering.
+                </p>
+
+                <a
+                    href="road-trip-story.html"
+                    class="travel-read-more"
+                >
+                    Read Full Story →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             STORY 6
+        ========================= -->
+
+        <div class="travel-story-card">
+
+            <img
+                src="images/travel-memory-1.jpg"
+                alt="Travel Memory"
+            >
+
+            <div class="travel-story-content">
+
+                <span class="travel-story-category">
+                    MY TRIP • TRAVEL DIARY
+                </span>
+
+                <h3>
+                    One Trip, Many Memories
+                </h3>
+
+                <p>
+                    A collection of places, people, food and moments that
+                    made this journey something I will remember for a long
+                    time.
+                </p>
+
+                <a
+                    href="travel-diary.html"
+                    class="travel-read-more"
+                >
+                    Read Full Story →
+                </a>
+
+            </div>
+
+        </div>
+
 
     </div>
 
